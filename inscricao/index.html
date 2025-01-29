@@ -47,8 +47,63 @@
         </header>
         <main>
 
+            <div class="areas">
+                <img class="wake_logo" src="../src/assets/LOGO-WAKE-UP 1.svg" />
+            </div>
+            <div class="areas form">
+                <form>
+                    <!-- PRIMEIRO FORMULÁRIO -->
+                    <div class="primeiroFormulario">
+                        <H2>Preencha atentamente os itens abaixo <br />
+                            para efetuar sua inscrição</H2>
+    
+                        <h2 class="tituloInformacao">Dados Pessoais</h2>
+                        <span class="spaco" />
+                        <div class="inputArea">
+                            <input class="textInput"  id="" type="text" placeholder="Nome:" required />
+                            <input class="textInput"  id="" type="text" placeholder="Sobrenome" required />
+                        </div>
+                        <div class="inputArea">
+                            <input class="textInput"  id="" type="text" placeholder="Idade:" required />
+                            <input class="textInput"  id="" type="text" placeholder="Telefone" required/>
+                        </div>
+                        <div class="inputArea">
+                            <select class="textInput" id=""  >
+                                <option value="">Sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <input class="textInput"  id="" type="text" placeholder="CPF.:" />
+                        </div>
+                        <h2 class="tituloInformacao">Endereço</h2>
+                        <span class="spaco" />
+                        <div class="inputArea">
+                            <input class="textInput"  id="" type="text" placeholder="Rua/Lote/Quadra:" />
+                            <input class="textInput"  id="" type="text" placeholder="Nº." />
+                        </div>
+                        <div class="inputArea">
+                            <input class="textInput"  id="" type="text" placeholder="Bairro:" />
+                            <input class="textInput"  id="" type="text" placeholder="Cidade" />
+                        </div>
+                        <div class="inputArea">
+                            <input class="textInput"  id="" type="text" placeholder="Estado:" />
+                            <input class="textInput"  id="" type="text" placeholder="CEP:" />
+                        </div>
+                        <div class="inputArea">
+                            <button class="buttonCancel" id="">Cancelar e voltar ao inicio</button>
+                            <button id="" onclick={nextForm()}>Prosseguir com a inscrição</button>
+                        </div>
+                        <!-- SEGUNDO FORMULÁRIO -->
+                        <div class="segundoFormulario">
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
         </main>
         
-        <script src="" async defer></script>
+        <script src="../inscricao/scripts.js" async defer></script>
     </body>
 </html>

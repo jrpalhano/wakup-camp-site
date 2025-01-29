@@ -76,17 +76,97 @@ body{
         }
         main{
             width: 100%;
-            height: 100% - 80px;
+            height: 80%;
             display: flex;
-            flex-direction: column;
+            position: relative;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-                .description{
+                .areas{
                     margin-top: 40px;
                     padding: 22px;
-                    width: 570px ;
-                    background-color: rgba(0, 0, 0, 0.7);
-                    border-radius: 12px;
+                    width: 49%;
+                    height: 100%;
+                    .wake_logo{
+                        margin-left: 80px;
+                        margin-top: 50px;
+                        width: 70%;
+                    }
+                    .form{
+                        padding: 10px;                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    form{
+                        padding: 15px;
+                        width: 80%;
+             
+                        background-color: #FF8F00;
+                        border-radius: 15px;
+                        .primeiroFormulario{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .segundoFormulario{
+                            display: none;
+                            flex-direction: column;
+                        }
+                        h2{
+                            font-weight: 300;
+                            text-align: center;
+                            color: #fff;
+                        }
+                        .tituloInformacao{
+                            margin-top: 17px;
+                            font-weight: 600;
+                        }
+                        .inputArea{
+                            margin-top: 20px;
+                            width: 100%;
+                            height: 35px;
+                            display: flex;
+                            gap: 10px;
+                            .textInput{
+                                flex: 1;
+                                padding: 6px;
+                                font-size: large;
+                                color: #222;
+                                border-radius: 6px;
+                                border: none;                                
+                            }
+                            .textInput:focus{
+                                outline: 2px solid #006862;
+                            }
+                            button{
+                                flex: 1;
+                                padding: 6px;
+                                font-size: large;
+                                border-radius: 6px;
+                                border: none;
+                                background-color: #00b4ab;
+                                color: white;
+                            }
+                            .buttonCancel{
+                                background-color: #be3e3e;
+                                color: white;
+                            }
+                            button:hover{
+                                background-color: #006862;
+                                color: white;
+                                font-weight: 600;
+                            }
+                            .buttonCancel:hover{
+                                background-color: #790000;
+                                color: white;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                }
+                .areas_form{
+
                 }
                 p{
                     text-align: center;
