@@ -30,6 +30,8 @@ const jackPot = document.getElementById('jackPot')
 
 const valorInscricao = document.getElementById('valorInscricao')
 
+const btnEnviar = document.getElementById('btnEnviar')
+
 
 let valorEntrada = 0
 
@@ -57,7 +59,7 @@ parcelamento.addEventListener("change", ()=>{
     console.log(120);
     valorEntrada = 120
   }
-  else if(Number(idade.value) > 12 && parcelamento.value === "À Vista (Dinheiro em mãos)"){
+  else if(Number(idade.value) > 12 && parcelamento.value === "Débito à Vista"){
     console.log(120);
     valorEntrada = 120
   }  
@@ -86,13 +88,22 @@ function validacao(){
 
 async function submit(){
 
+  btnEnviar.innerHTML = 'Carregando suas informações'
+  btnEnviar.style.backgroundColor = '#947347'
+  btnEnviar.style.fontWeight = 400
+  
+  
   //validação
-
-
   if(!check.checked){
     termosAceitar.style.backgroundColor = "rgba(255, 0, 0, 0.7)"
+    
+    btnEnviar.innerHTML = 'Prosseguir com a inscrição'
+    btnEnviar.style.backgroundColor = '#ffad42'
+    btnEnviar.style.fontWeight = 400
+    
     return toast()
   }
+  btnEnviar.setAttribute('disabled','')
   
   const data = {
     nome: nome.value,
@@ -144,13 +155,20 @@ async function submit(){
     
   ]).then(()=>{
     toastSuccess()
+    btnEnviar.innerHTML = 'Inscrição enviada!'
+    btnEnviar.setAttribute('disabled','')
+    btnEnviar.style.backgroundColor = '#00928b'
+    btnEnviar.style.fontWeight = 400
     setTimeout(() => {
       return window.location.href = '/'
-    }, [4000]);
+    }, [2000]);
     
   }).catch(()=>{
     toastErroCadastro()
-    
+    btnEnviar.innerHTML = 'Erro no envio...'
+    btnEnviar.setAttribute('disabled', 'false')
+    btnEnviar.style.backgroundColor = '#00928b'
+    btnEnviar.style.fontWeight = 400    
   })
 
 

@@ -46,11 +46,10 @@
             </nav>
         </header>
         <main>
-
-            <div class="areas">
+            <div class="areasL" id="logo_area">
                 <img class="wake_logo" src="../src/assets/LOGO-WAKE-UP 1.svg" />
             </div>
-            <div class="areas form">
+            <div class="areas" id="form_area" >
                 <div class="formInscrição">
                     <!-- PRIMEIRO FORMULÁRIO -->
                     <div class="primeiroFormulario" id="primeiroFormulario">
@@ -183,7 +182,7 @@
                             </p>
                             <p class="termo termoCentralizado"><strong>AS REGRAS QUE FOREM QUEBRADAS TERÃO SUAS CONSEQUÊNCIAS PESSOAIS E INTRANSFERÍVEIS.</strong></p>
                             <p class="termo termoEspaco">O assunto será levado à comissão de disciplina (todos os monitores) que avaliarão a questão, sendo a punição máxima: voltar para casa, sem devolução do dinheiro.</p>
-                            <p class="termo termoEspaco">É obrigatório e de responsabilidade exclusiva do acampante o envio do comprovante de pagamento para confirmar sua participação, para o whatsapp (00) 0 0000-0000.</p>
+                            <p class="termo termoEspaco">É obrigatório e de responsabilidade exclusiva do acampante o envio do comprovante de pagamento para confirmar sua participação, para o whatsapp (99) 9 9230-6257.</p>
                             <p class="termo termoCentralizado"><strong>A CONFIRMAÇÃO DA INSCRIÇÃO SERÁ SOMENTE REALIZADA MEDIANTE PAGAMENTO E RECEBIMENTO DO COMPROVANTE PELA DIRETORIA DO WAKEUP CAMP 2025.</strong> </p>
                             <div class="termosAceitar" id="termosAceitar">
                                 <input type="checkbox" class="check" id="check" />
@@ -194,7 +193,13 @@
                             
                             <div class="inputArea">
                                 <button class="buttonCancel" onclick={voltarForm2()} id="">Cancelar e Saír</button>
-                                <button id="btnNextForm" onclick={submit()}>Prosseguir com a inscrição</button>
+                                <button id="btnEnviar" onclick={submit()}>
+                                    Prosseguir com a inscrição
+                                    
+                                </button>
+                            </div>
+                            <div>
+                                <span class="loader"></span>
                             </div>
                     </div>
                 </div>

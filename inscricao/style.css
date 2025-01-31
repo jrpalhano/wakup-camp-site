@@ -77,7 +77,7 @@ body{
             width: 100%;
             height: 80%;
             display: flex;
-            position: relative;
+           
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -281,7 +281,6 @@ body{
                             .inputArea{
                                 margin-top: 20px;
                                 width: 100%;
-                                height: 35px;
                                 display: flex;
                                 gap: 10px;
                                 .textInput{
@@ -314,11 +313,17 @@ body{
                                     color: white;
                                     font-weight: 600;
                                 }
+                                .button:disabled{
+                                    background-color: #947347;
+                                    color: white;
+                                    font-weight: 400;
+                                }
                                 .buttonCancel:hover{
                                     background-color: #790000;
                                     color: white;
                                     font-weight: 600;
                                 }
+                                
                         }
                     }
 
@@ -419,3 +424,252 @@ body{
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
+
+  /* LOADER */
+
+.loader {
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.1s infinite ease;
+    transform: translateZ(0);
+  }
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.2), -2.6em 0em 0 0em rgba(255,255,255, 0.5), -1.8em -1.8em 0 0em rgba(255,255,255, 0.7);
+    }
+    12.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.2), -2.6em 0em 0 0em rgba(255,255,255, 0.2), -1.8em -1.8em 0 0em rgba(255,255,255, 0.5);
+    }
+    25% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.5), 1.8em -1.8em 0 0em rgba(255,255,255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.2), -2.6em 0em 0 0em rgba(255,255,255, 0.2), -1.8em -1.8em 0 0em rgba(255,255,255, 0.2);
+    }
+    37.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.5), 2.5em 0em 0 0em rgba(255,255,255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.2), -2.6em 0em 0 0em rgba(255,255,255, 0.2), -1.8em -1.8em 0 0em rgba(255,255,255, 0.2);
+    }
+    50% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.5), 1.75em 1.75em 0 0em rgba(255,255,255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255,255,255, 0.2), -2.6em 0em 0 0em rgba(255,255,255, 0.2), -1.8em -1.8em 0 0em rgba(255,255,255, 0.2);
+    }
+    62.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.5), 0em 2.5em 0 0em rgba(255,255,255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255,255,255, 0.2), -1.8em -1.8em 0 0em rgba(255,255,255, 0.2);
+    }
+    75% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.5), -1.8em 1.8em 0 0em rgba(255,255,255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255,255,255, 0.2);
+    }
+    87.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.5), -2.6em 0em 0 0em rgba(255,255,255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+    }
+  }
+
+
+
+
+
+  /* Mobile (até 480px) */
+@media all and (max-width: 480px) {
+    /* Estilos para mobile aqui */
+
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        position: relative;
+        width: 100%;
+        height: 100% - 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body>main>.areasL{
+        width: 100%;
+
+    }
+    body>main>.areasL>img{
+        height: 10%;
+        width: 10%;
+    }
+    body>main>.areas{
+
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    body>main>.areasL>.form{
+        padding: 10px;                        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.areas>.formInscrição{
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }   
+    
+    .inputArea{
+        display: flex;
+        flex-direction: column;        
+    }
+    body>main>.areas>.formInscrição>.segundoFormulario{
+        flex-direction: column;
+        .pagamento{
+            display: flex;
+            flex-direction: column!important;
+        }
+    }
+
+}
+
+/* Tablet (481px até 720px) */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    /* Estilos para tablet aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        position: relative;
+        width: 100%;
+        height: 100% - 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body>main>.areasL{
+        width: 100%;
+
+    }
+    body>main>.areasL>img{
+        height: 10%;
+        width: 10%;
+    }
+    body>main>.areas{
+
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    body>main>.areasL>.form{
+        padding: 10px;                        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.areas>.formInscrição{
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }   
+    
+    .inputArea{
+        display: flex;
+        flex-direction: column;        
+    }
+    body>main>.areas>.formInscrição>.segundoFormulario{
+        flex-direction: column;
+        .pagamento{
+            display: flex;
+            flex-direction: column!important;
+        }
+    }
+}
+
+/* Desktop pequeno (721px até 1366px) */
+@media screen and (min-width: 721px) and (max-width: 1366px) {
+    /* Estilos para desktop pequeno aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        width: 100%;
+        height: 100% - 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   body>main>.areasL{
+        width: 100%;
+
+    }
+    body>main>.areasL>img{
+        width: 70%;
+    }
+    body>main>.areas>.formInscrição{
+        width: auto;
+    }
+}
+
+/* Desktop grande (maior que 1366px) */
+@media screen and (min-width: 1367px) {
+    /* Estilos para desktop grande aqui */
+        body>main>.areas>.formInscrição{
+        width: auto;
+    }
+}

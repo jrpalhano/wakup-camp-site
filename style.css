@@ -23,7 +23,6 @@ body{
     }
         header{
         width: "100%";
-        height: 80PX;
         display: flex;
         flex-direction: row;
 
@@ -88,4 +87,129 @@ body{
 
 }
 
+/* Mobile (até 480px) */
+@media all and (max-width: 480px) {
+    /* Estilos para mobile aqui */
 
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main>div{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>div>img{
+        width: 90%;
+    }
+    body>main>.description{
+        width: 90%;
+    }
+
+}
+
+/* Tablet (481px até 720px) */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    /* Estilos para tablet aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 12pt;
+    }
+    body>main>div{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>div>img{
+        width: 90%;
+    }
+    body>main>.description{
+        width: 90%;
+    }
+}
+
+/* Desktop pequeno (721px até 1366px) */
+@media screen and (min-width: 721px) and (max-width: 1366px) {
+    /* Estilos para desktop pequeno aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 12pt;
+    }
+    body>main>div{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>div>img{
+        width: 100%;
+    }
+    body>main>.description{
+        width: 90%;
+    }
+}
+
+/* Desktop grande (maior que 1366px) */
+@media screen and (min-width: 1367px) {
+    /* Estilos para desktop grande aqui */
+}

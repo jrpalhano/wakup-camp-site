@@ -110,3 +110,184 @@ body{
 }
 
 
+/* Mobile (até 480px) */
+@media all and (max-width: 480px) {
+    /* Estilos para mobile aqui */
+
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.logo_wake{
+        padding: 20px;
+        width: 100%;
+    }
+    body>main>.logo_wake>img{
+        width: 100%;
+    }
+    body>main>.contato_div{ 
+        padding-top: 1%;       
+        width: 100%;
+        height: 100%;   
+    }
+    body>main>.contato_div>.contato{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.contato_div>.contato>img{
+        width: 60%;
+    }
+    body>main>.contato_div>.contato>.description{
+        width: 80%;
+    }
+
+}
+
+/* Tablet (481px até 720px) */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    /* Estilos para tablet aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.logo_wake{
+        padding: 20px;
+        width: 100%;
+    }
+    body>main>.logo_wake>img{
+        width: 100%;
+    }
+    body>main>.contato_div{        
+        width: 100%;
+        height: 100%;   
+    }
+    body>main>.contato_div>.contato{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.contato_div>.contato>img{
+        width: 60%;
+    }
+    body>main>.contato_div>.contato>.description{
+        width: 80%;
+    }
+}
+
+/* Desktop pequeno (721px até 1366px) */
+@media screen and (min-width: 721px) and (max-width: 1366px) {
+    /* Estilos para desktop pequeno aqui */
+    body>.back{
+        background: url('../src/assets/OBJECTS.svg') no-repeat bottom center scroll;
+        background-position: 30% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: fixed ;
+        display: block;  
+        bottom: 0;      
+    }
+    body>header{
+        height: 60px;
+    }
+    body>header>.logo_area>img{
+        height: 100%;
+    }
+    body>header>nav>.link>span{
+        padding: 8px;
+    }
+    body>header>nav>.link>span>p{
+        font-size: 10pt;
+    }
+    body>main{
+        width: 100%;
+        height: 100% - 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.logo_wake{
+        padding: 20px;
+        width: 50%;
+    }
+    body>main>.logo_wake>img{
+        width: 100%;
+    }
+    body>main>.contato_div{ 
+        padding-top: 0px;       
+        width: 50%;
+        height: 100%;   
+    }
+    body>main>.contato_div>.contato{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    body>main>.contato_div>.contato>img{
+        width: 60%;
+    }
+    body>main>.contato_div>.contato>.description{
+        width: 80%;
+    }
+}
+
+/* Desktop grande (maior que 1366px) */
+@media screen and (min-width: 1367px) {
+    /* Estilos para desktop grande aqui */
+}
