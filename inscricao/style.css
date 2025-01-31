@@ -71,7 +71,6 @@ body{
                             color: #DFDFDF;
                         }
                 }
-
             }
         }
         main{
@@ -98,69 +97,228 @@ body{
                         justify-content: center;
                         align-items: center;
                     }
-                    form{
+                    .formInscrição{
                         padding: 15px;
                         width: 80%;
-             
-                        background-color: #FF8F00;
+                        
+                        background-color: #006862;
                         border-radius: 15px;
-                        .primeiroFormulario{
-                            display: flex;
-                            flex-direction: column;
-                        }
-                        .segundoFormulario{
-                            display: none;
-                            flex-direction: column;
-                        }
-                        h2{
-                            font-weight: 300;
-                            text-align: center;
-                            color: #fff;
-                        }
-                        .tituloInformacao{
-                            margin-top: 17px;
-                            font-weight: 600;
-                        }
-                        .inputArea{
-                            margin-top: 20px;
-                            width: 100%;
-                            height: 35px;
-                            display: flex;
-                            gap: 10px;
-                            .textInput{
-                                flex: 1;
-                                padding: 6px;
-                                font-size: large;
-                                color: #222;
-                                border-radius: 6px;
-                                border: none;                                
+                            .primeiroFormulario{
+                                display: flex;
+                                flex-direction: column;
+                                .jackPot{
+                                    display: none
+                                }
                             }
-                            .textInput:focus{
-                                outline: 2px solid #006862;
+                            .segundoFormulario{
+                                display: none;
+                                flex-direction: column;
+                                .inputArea2{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    .tituloPagamento{
+                                        margin-top: 1px;
+                                        font-weight: 600;
+                                    }
+                                    label{
+                                        margin-top: 8px;
+                                        color: white;
+                                        font-size: large;
+                                    }
+                                    .textInput{
+                                        flex: 1;
+                                        padding: 6px;
+                                        font-size: large;
+                                        color: #222;
+                                        border-radius: 6px;
+                                        border: none;                                
+                                    }
+                                    .textArea{
+                                        flex: 1;
+                                        padding: 6px;
+                                        font-size: large;
+                                        color: #222;
+                                        border-radius: 6px;
+                                        border: none;                                         
+                                    }
+                                    .pagamento{
+                                        display: flex;
+                                        flex-direction: row;
+                                        gap: 12px;
+                                            span{
+                                                margin: 0 20px 0 15px;
+                                                display: flex;
+                                                flex-direction: row;
+                                                gap: 8px;
+                                            }
+                                    }
+                                    .textArea:focus{
+                                        outline: 2px solid #006862;
+                                    }
+                                    .textInput:focus{
+                                        outline: 2px solid #006862;
+                                    }
+                                }
                             }
-                            button{
-                                flex: 1;
-                                padding: 6px;
-                                font-size: large;
-                                border-radius: 6px;
-                                border: none;
-                                background-color: #00b4ab;
-                                color: white;
+                            .terceiroFormulario{
+                                height: 600px;
+                                overflow: auto;
+                                display: none;
+                                padding: 10px;
+                                flex-direction: column; 
+                                .tituloInformacao{
+                                    margin-top: 15px;
+                                    margin-bottom: 15px;
+                                    font-weight: 600;
+                                }                                
+                                .termo{
+                                    font-size: medium;
+                                    text-align: left;
+                                    line-height: 16pt;
+                                }
+                                .termoEspaco{
+                                    margin-bottom: 10px;
+                                } 
+                                .termoCentralizado{
+                                    margin: 15px 0;
+                                    text-align: center;
+                                }                              
+                                .inputArea2{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    .tituloPagamento{
+                                        margin-top: 1px;
+                                        font-weight: 600;
+                                    }
+                                    label{
+                                        margin-top: 8px;
+                                        color: white;
+                                        font-size: large;
+                                    }
+                                    .textInput{
+                                        flex: 1;
+                                        padding: 6px;
+                                        font-size: large;
+                                        color: #222;
+                                        border-radius: 6px;
+                                        border: none;                                
+                                    }
+                                    .textArea{
+                                        flex: 1;
+                                        padding: 6px;
+                                        font-size: large;
+                                        color: #222;
+                                        border-radius: 6px;
+                                        border: none;                                         
+                                    }
+                                    .pagamento{
+                                        display: flex;
+                                        flex-direction: row;
+                                        gap: 12px;
+                                            span{
+                                                margin: 0 20px 0 15px;
+                                                display: flex;
+                                                flex-direction: row;
+                                                gap: 8px;
+                                            }
+                                    }
+                                    .textArea:focus{
+                                        outline: 2px solid #006862;
+                                    }
+                                    .textInput:focus{
+                                        outline: 2px solid #006862;
+                                    }
+                                }
+                                .termosAceitar{
+                                    padding: 12px;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: rgba(0, 0, 0, 0.7);
+                                    border-radius: 8px;
+                                    .check{
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                    .check:hover{
+                                        border:"3px solid #FF8F00";
+                                    }
+                                    span{
+                                        width: 90%;
+                                        align-items: center;
+                                        p{
+                                            font-size: medium;
+                                        }
+                                    }
+                                }
+
                             }
-                            .buttonCancel{
-                                background-color: #be3e3e;
-                                color: white;
+                            .terceiroFormulario::-webkit-scrollbar {
+                                width: 10px;  /* largura da barra de rolagem vertical */
+                                height: 10px; /* altura da barra de rolagem horizontal */
                             }
-                            button:hover{
-                                background-color: #006862;
-                                color: white;
+                            .terceiroFormulario::-webkit-scrollbar-thumb {
+                                background: #FF8F008c;
+                                border-radius: 4px;                                
+                            }
+                            .terceiroFormulario::-webkit-scrollbar-thumb:hover {
+                                background: #fac580;
+                            }
+                            h2{
+                                font-weight: 300;
+                                text-align: center;
+                                color: #fff;
+                            }
+                            .tituloInformacao{
+                                margin-top: 17px;
                                 font-weight: 600;
                             }
-                            .buttonCancel:hover{
-                                background-color: #790000;
-                                color: white;
-                                font-weight: 600;
-                            }
+                            .inputArea{
+                                margin-top: 20px;
+                                width: 100%;
+                                height: 35px;
+                                display: flex;
+                                gap: 10px;
+                                .textInput{
+                                    flex: 1;
+                                    padding: 6px;
+                                    font-size: large;
+                                    color: #222;
+                                    border-radius: 6px;
+                                    border: none;                                
+                                }
+                                .textInput:focus{
+                                    outline: 2px solid #006862;
+                                }
+                                button{
+                                    flex: 1;
+                                    padding: 6px;
+                                    font-size: large;
+                                    border-radius: 6px;
+                                    border: none;
+                                    background-color: #ffad42;
+                                    color: white;
+                                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+                                }
+                                .buttonCancel{
+                                    background-color: #be3e3e;
+                                    color: white;
+                                }
+                                button:hover{
+                                    background-color: #ff9100;
+                                    color: white;
+                                    font-weight: 600;
+                                }
+                                .buttonCancel:hover{
+                                    background-color: #790000;
+                                    color: white;
+                                    font-weight: 600;
+                                }
                         }
                     }
 
@@ -177,4 +335,87 @@ body{
 
 }
 
-
+/*---- TOAST ERROR ----*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #8a0000f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbarSuccess {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #009c15f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbarSuccess.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbarErroCadastro {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #8a0000f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbarErroCadastro.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

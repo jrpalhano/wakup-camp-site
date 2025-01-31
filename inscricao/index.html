@@ -51,59 +51,160 @@
                 <img class="wake_logo" src="../src/assets/LOGO-WAKE-UP 1.svg" />
             </div>
             <div class="areas form">
-                <form>
+                <div class="formInscrição">
                     <!-- PRIMEIRO FORMULÁRIO -->
-                    <div class="primeiroFormulario">
+                    <div class="primeiroFormulario" id="primeiroFormulario">
                         <H2>Preencha atentamente os itens abaixo <br />
                             para efetuar sua inscrição</H2>
     
                         <h2 class="tituloInformacao">Dados Pessoais</h2>
                         <span class="spaco" />
                         <div class="inputArea">
-                            <input class="textInput"  id="" type="text" placeholder="Nome:" required />
-                            <input class="textInput"  id="" type="text" placeholder="Sobrenome" required />
+                            <input class="textInput"  id="nome" type="text" placeholder="Nome:" required />
+                            <input class="textInput"  id="sobrenome" type="text" placeholder="Sobrenome" required />
                         </div>
                         <div class="inputArea">
-                            <input class="textInput"  id="" type="text" placeholder="Idade:" required />
-                            <input class="textInput"  id="" type="text" placeholder="Telefone" required/>
+                            <input class="textInput"  id="idade" type="number" placeholder="Idade:" required />
+                            <input class="textInput"  id="telefone" type="text" placeholder="Seu Telefone ou do Responsável" required/>
+                            <input class="jackPot"  id="jackPot" placeholder="Seu numero" required/>
                         </div>
                         <div class="inputArea">
-                            <select class="textInput" id=""  >
+                            <select class="textInput" id="sexo"  >
                                 <option value="">Sexo</option>
                                 <option value="masculino">Masculino</option>
                                 <option value="feminino">Feminino</option>
                             </select>
-                            <input class="textInput"  id="" type="text" placeholder="CPF.:" />
+                            <input class="textInput"  id="cpf" type="text" placeholder="CPF.:" />
+                        </div>
+                        <h2 class="tituloInformacao">Camisa</h2>
+                        <span class="spaco" />
+                        <div class="inputArea">
+                            <select class="textInput" id="sexoVestimenta"  >
+                                <option value="">Sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <select class="textInput" id="tamanho"  >
+                                <option value="">Tamanho</option>
+                                <option value="Infantil">Infantil</option>
+                                <option value="P">P</option>
+                                <option value="P">P - Baby look</option>
+                                <option value="M">M</option>
+                                <option value="M">M - Baby look</option>
+                                <option value="G">G</option>
+                                <option value="GG">GG</option>
+                            </select>
                         </div>
                         <h2 class="tituloInformacao">Endereço</h2>
                         <span class="spaco" />
                         <div class="inputArea">
-                            <input class="textInput"  id="" type="text" placeholder="Rua/Lote/Quadra:" />
-                            <input class="textInput"  id="" type="text" placeholder="Nº." />
+                            <input class="textInput"  id="logradouro" type="text" placeholder="Rua/Lote/Quadra:" />
+                            <input class="textInput"  id="numero" type="text" placeholder="Nº." />
                         </div>
                         <div class="inputArea">
-                            <input class="textInput"  id="" type="text" placeholder="Bairro:" />
-                            <input class="textInput"  id="" type="text" placeholder="Cidade" />
+                            <input class="textInput"  id="bairro" type="text" placeholder="Bairro:" />
+                            <input class="textInput"  id="cidade" type="text" placeholder="Cidade" />
                         </div>
                         <div class="inputArea">
-                            <input class="textInput"  id="" type="text" placeholder="Estado:" />
-                            <input class="textInput"  id="" type="text" placeholder="CEP:" />
+                            <input class="textInput"  id="estado" type="text" placeholder="Estado:" />
+                            <input class="textInput"  id="cep" type="text" placeholder="CEP:" />
                         </div>
                         <div class="inputArea">
-                            <button class="buttonCancel" id="">Cancelar e voltar ao inicio</button>
-                            <button id="" onclick={nextForm()}>Prosseguir com a inscrição</button>
-                        </div>
-                        <!-- SEGUNDO FORMULÁRIO -->
-                        <div class="segundoFormulario">
-                            
+                            <button class="buttonCancel" id="">Cancelar e Saír</button>
+                            <button id="btnNextForm" onclick={avancarForm()}>Prosseguir com a inscrição</button>
                         </div>
                     </div>
-                </form>
+                    <!-- SEGUNDO FORMULÁRIO -->
+                    <div class="segundoFormulario" id="segundoFormulario">
+                            <h2 class="tituloInformacao">Informações Médicas</h2>
+                            <span class="spaco" />
+                            <div class="inputArea2">
+                                <label>Faz uso de alguma medicação
+                                ou possui restrição médica?</label>
+                                <select class="textInput" id="restricaoMedica"  >
+                                    <option value=""></option>
+                                    <option value="true">Sim</option>
+                                    <option value="false">Não</option>
+                                </select>
+                                <label>Se sim, qual medicação ou restrição?</label>                                
+                                <textarea class="textArea"  id="descRestricaoMedica" type="text"  placeholder="Ex.: Não posso tomar dipirona, ou tenho uma medicação de 6 em 6 horas"></textarea>
+
+                                <label>Possui dieta alimentar 
+                                    diferenciada?</label>
+                                    <select class="textInput" id="resticaoAlimentar"  >
+                                        <option value=""></option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                    <label>Se sim, descreva a dieta.</label>                                
+                                    <textarea class="textArea"  id="descRestricaoAlimentar" type="text"  placeholder="Ex.: não posso consumir alimentos com glutém."></textarea>
+                                    <h2 class="tituloInformacao">Forma de Pagamento</h2>
+                                    <div class="pagamento">
+                                        <select class="textInput" id="parcelamento"  >
+                                            <option value=""></option>
+                                            <option value="À Vista (Dinheiro em mãos)">À Vista (Dinheiro em mãos)</option>
+                                            <option value="À Vista (Pix)">À Vista (Pix)</option>
+                                            <option value="Parcelamento Crédito (Até 3x)">Parcelamento Crédito (Até 3x)</option>
+                                            <option value="Cartão à Vista">Cartão à Vista</option>
+                                            <option value="Débito à Vista">Débito à Vista</option>
+                                            <option value="Monitoria">Monitoria</option>
+                                        </select>
+                                        <span>
+                                            <p>Valor: R$</p>
+                                            <p id="valorInscricao">0,00</p>
+                                        </span>
+                                    </div>
+                                    <div class="inputArea">
+                                        <button class="buttonCancel" onclick={voltarForm1()} id="">Cancelar e Saír</button>
+                                        <button id="btnNextForm" onclick={avancarForm3()}>Prosseguir com a inscrição</button>
+                                    </div>
+                            </div>
+                            
+                        </div>
+                        <div class="terceiroFormulario" id="terceiroFormulario">
+                            <h2 class="tituloInformacao">Termos, Condições e Regras</h2>
+                            <p class="termo ">Leia atentamente os Termos e Condições para a participação no WakeUp Camp 2025</p><br/>
+                            <p class="termo">
+                                <strong>1.</strong> Cresça um pouco mais, concentre-se no recado que Deus tem para sua vida!<br/>
+                                <strong>2.</strong> Aproveite ao máximo as atividades.<br/>
+                                <strong>3.</strong> Conviva com alegria, disposição, otimismo, compreensão, cooperação e amor.<br/>
+                                <strong>4.</strong> Observe os horários, eles devem ser cumpridos;<br/>
+                                <strong>5.</strong> Cuide de seus objetos pessoais, mantenha suas coisas em ordem;<br/>
+                                <strong>6.</strong> Colabore em tudo o que for preciso, afinal você faz parte do grupo;<br/>
+                                <strong>7.</strong> Aproveite este tempo para se aproximar de Deus e das pessoas;<br/>
+                                <strong>8.</strong> No rio: para meninas (não será permitido biquínis, roupas transparentes e curtas) para meninos (não será permitido sungas ou tanguinhas, apenas bermudas);<br/>
+                                <strong>9.</strong> Não será permitido levar qualquer tipo de bomba, morteiro ou derivados;<br/>
+                                <strong>10.</strong> É proibido nadar no rio sem permissão; <br/>
+                                <strong>11.</strong> Será terminantemente proibido “FICAR” no acampamento; casais de namorado não devem se afastar do grupo;<br/>
+                                <strong>12.</strong> É proibido meninos entrarem no alojamento das meninas e vice-versa;<br/>
+                                <strong>13.</strong> Será proibido fazer qualquer espécie de brincadeira com qualquer pessoa que não esteja disposta a brincar, respeite o seu amigo.Qualquer problema ou dificuldade comunique a liderança;<br/>
+                                <strong>14.</strong> Não poderão ficar sozinhos pessoas do sexo oposto, apenas acompanhado do grupo;<br/>
+                                <strong>15.</strong> Maximo 4 minutos de banho;<br/>
+                            </p>
+                            <p class="termo termoCentralizado"><strong>AS REGRAS QUE FOREM QUEBRADAS TERÃO SUAS CONSEQUÊNCIAS PESSOAIS E INTRANSFERÍVEIS.</strong></p>
+                            <p class="termo termoEspaco">O assunto será levado à comissão de disciplina (todos os monitores) que avaliarão a questão, sendo a punição máxima: voltar para casa, sem devolução do dinheiro.</p>
+                            <p class="termo termoEspaco">É obrigatório e de responsabilidade exclusiva do acampante o envio do comprovante de pagamento para confirmar sua participação, para o whatsapp (00) 0 0000-0000.</p>
+                            <p class="termo termoCentralizado"><strong>A CONFIRMAÇÃO DA INSCRIÇÃO SERÁ SOMENTE REALIZADA MEDIANTE PAGAMENTO E RECEBIMENTO DO COMPROVANTE PELA DIRETORIA DO WAKEUP CAMP 2025.</strong> </p>
+                            <div class="termosAceitar" id="termosAceitar">
+                                <input type="checkbox" class="check" id="check" />
+                                <span>
+                                    <p>Ao clicar na caixa ao lado declaro que estou de acordo com todas as regras e condições para participar do <br/>WakeUp Camp 2025</p>
+                                </span>
+                            </div>
+                            
+                            <div class="inputArea">
+                                <button class="buttonCancel" onclick={voltarForm2()} id="">Cancelar e Saír</button>
+                                <button id="btnNextForm" onclick={submit()}>Prosseguir com a inscrição</button>
+                            </div>
+                    </div>
+                </div>
             </div>
 
 
         </main>
-        
+        <div id="snackbar">Campo Obrigatório não preenchido</div>
+        <div id="snackbarSuccess">Inscrição finalizada com sucesso!</div>
+        <div id="snackbarErroCadastro">Erro ao finalizar Inscrição! Verifique os campos preenchidos e tente novamente!</div>
         <script src="../inscricao/scripts.js" async defer></script>
     </body>
 </html>
