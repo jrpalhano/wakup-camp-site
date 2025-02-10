@@ -82,7 +82,7 @@ async function initialData(){
         <div class="simple-bar-chart">
             
             <div class="item" style="--clr: #5EB344; --val: 0">
-            <div class="label">Infantil</div>
+            <div class="label">Inf.</div>
             <div class="value">0</div>
             </div>
             
@@ -92,7 +92,7 @@ async function initialData(){
             </div>
             
             <div class="item" style="--clr: #F8821A; --val: ${contagem.feminino["M - Baby look"]}">
-            <div class="label">P - Baby look</div>
+            <div class="label">P-BL</div>
             <div class="value">${contagem.feminino["M - Baby look"]}</div>
             </div>
             
@@ -102,7 +102,7 @@ async function initialData(){
             </div>
             
             <div class="item" style="--clr: #963D97; --val: ${contagem.feminino["M - Baby look"]}">
-            <div class="label">M - Baby look</div>
+            <div class="label">M-BL</div>
             <div class="value">${contagem.feminino["M - Baby look"]}</div>
             </div>
             
@@ -123,7 +123,7 @@ async function initialData(){
             <div class="simple-bar-chart">
                 
                 <div class="item" style="--clr: #5EB344; --val: ${contagem.masculino.Infantil}">
-                <div class="label">Infantil</div>
+                <div class="label">Inf.</div>
                 <div class="value">${contagem.masculino.Infantil}</div>
                 </div>
                 
