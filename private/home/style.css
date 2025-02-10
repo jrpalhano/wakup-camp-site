@@ -4,20 +4,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     padding: 10px;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 12px;
 
     background-color: #003532;
-
+    .mobile_menu{
+        display: none;
+    }
     .menu{
         padding: 25px 0;
-        width: 350px;
+        min-width: 230px;
         height: 100%;
         background-color: #004744;
         border-radius: 12px;
@@ -71,11 +74,13 @@ body{
         }
         .footer{
 
-            width: 350px;
+            width: 100%;
 
             bottom: 18px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
    
            
             p{
@@ -165,7 +170,7 @@ body{
                         width: 100%;
                         flex: 1;
                    
-                        overflow: auto;
+               
 
                         .cardSubscribeInfo{
                             padding: 4px;
@@ -473,3 +478,174 @@ li:hover{
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
   
+  @media all and (max-width: 768px) {
+    body{
+        padding: 10px;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+    
+        background-color: #003532;
+        .menu{
+            display: none;
+        }
+        .mobile_menu{
+            padding: 6px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: row;
+            background-color: #004642;
+            border-radius: 12px;
+            color: white;
+            .mobile_user{
+                height: 100%;
+                display: flex;
+                flex: 1;
+                flex-direction: row;                
+                span{
+                    min-width: 80px;
+                    min-height: 80px;
+
+                    position: inherit;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 8px;
+                    background-color: #003532;
+                    text-align: center;
+
+                    p{
+                        font-size: 4pt;
+                    }
+
+                    
+                }
+                .boasVindas{
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+            }
+            .mobile_menu_item{
+                
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                span{
+                    padding: 0px 15px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: #0d746e;
+
+                    border-radius: 8px;
+                }
+            }
+            .mobile_menu_item:active{
+                background-color: #074744;
+            }
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+
+            .cards{
+                margin-bottom: 10px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .card{
+                    height: auto;
+                }
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                .area1{
+                    height: 500px;
+                    .lastSub{
+                        .lsContent{                            
+                            .cardSubscribeInfo{
+                                height: 95px;
+                                .subIcon{
+                                    display: flex;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal{
+        .wrapper{
+            width: 90%;
+            height: 80%;
+            .infoLine{
+                margin-top: 5px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    }
+    
+  }
+  @media screen and (min-width: 768px) and (max-width: 1170px) {
+    body{
+        .menu{
+            height: 100%;
+        }
+        .main{
+            .cards{             
+                .card{
+                    .cardTitle{
+                        .titleText{
+                            font-size: 20pt;
+                        }
+                    }
+                    .content{
+                        .contentValue{
+                            font-size: 28pt;
+                        }
+                    }
+                }               
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                .area1{
+                    height: 300px;
+                }
+                .area2{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    .graph{
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .graphShirtMale{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        }
+  }

@@ -23,7 +23,7 @@ async function handleLogin(){
         senha:senha.value
     }
 
-    const response = await fetch("http://localhost:4000/login", {
+    const response = await fetch("https://api-wakeup-camp-production.up.railway.app/login", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -34,12 +34,13 @@ async function handleLogin(){
     
     if(response.ok){
         btnEntrar.innerText = "Logado!"
-        localStorage.setItem("data", JSON.stringify(response))
+        localStorage.setItem("data", JSON.stringify(dataResp))
         setTimeout(() => {
             window.location.href = "/private/home"
         }, [3000]);
     }else{
         console.log("nada certo");
+        window.alert("lOGIN iNCORRETO")
         
     }
 

@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../../private/home/style.css">
+        <script src="../../private/auth.js" ></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -20,8 +21,8 @@
         <div class="menu">
             <div class="user">
                 <span>Imagine seu<br/> rosto aqui!</span>
-                <p>Manoel Junior</p>
-                <p>Programador</p>
+                <p id="nomeUsuario">Manoel Junior</p>
+                <p id="funcaoUsuario">Coordenação</p>
             </div>
             <div class="menu_item">
                 <ul>
@@ -29,13 +30,28 @@
                     <li>Confirmar Pagamento</li>
                     <li>Ultimos Cadastros</li>
                     <li>Participantes</li>
+                    <li onclick="logout()">Sair</li>
                 </ul>
             </div>
             <div class="separador"></div>
             <div class="footer">
-                <p>Desenvolvido por: ManyCodes</p>
-                <p>licenciado gratuitamente para:<br /> Igreja Elshaday NT</p>
+                <p>Desenvolvido por:<br /> &copy; ManyCodes</p>
+                
             </div>           
+        </div>
+        <div class="mobile_menu">
+            <div class="mobile_user">
+                <span>Imagine<br/> seu rosto</span>
+                <div class="boasVindas">
+                    <p>Bem Vindo(a)</p>
+                    <p id="nomeUsuario">Manoel Junior</p>
+                </div>
+            </div>
+            <div class="mobile_menu_item">              
+                    <span onclick="">Inicio</span>
+                    <span onclick="logout()">Sair</span>
+                
+            </div>      
         </div>
         <div class="main">
             <div class="cards">
@@ -91,86 +107,13 @@
                     </div>
                 </div>
                 <div class="area2">                    
-                    <div class="graph" >
-                        <h2>Camisas Femininas</h2>
-                        <div class="simple-bar-chart">
-                          
-                          <div class="item" style="--clr: #5EB344; --val: 10">
-                            <div class="label">Infantil</div>
-                            <div class="value">80</div>
-                          </div>
-                          
-                          <div class="item" style="--clr: #FCB72A; --val: 15">
-                            <div class="label">P</div>
-                            <div class="value">50</div>
-                          </div>
-                          
-                          <div class="item" style="--clr: #F8821A; --val: 15">
-                            <div class="label">P - Baby look</div>
-                            <div class="value">100</div>
-                          </div>
-                          
-                          <div class="item" style="--clr: #E0393E; --val: 25">
-                            <div class="label">M</div>
-                            <div class="value">40</div>
-                          </div>
-                          
-                          <div class="item" style="--clr: #963D97; --val: 25">
-                            <div class="label">M - Baby look</div>
-                            <div class="value">18</div>
-                          </div>
-                          
-                          <div class="item" style="--clr: #069CDB; --val: 24">
-                            <div class="label">G</div>
-                            <div class="value">90</div>
-                          </div>
-
-                          <div class="item" style="--clr: #db0669; --val: 20">
-                            <div class="label">GG</div>
-                            <div class="value">20</div>
-                          </div>
-                        </div>
+                    <div class="graph" id="graph" >
+                        <h1>Carregando Dados...</h1>
                     </div>
-                    <div class="graphShirtMale">
+                    <div class="graphShirtMale" id="graphShirtMale">
                         <div class="graph" >
-                            <h2>Camisas Masculinas</h2>
-                            <div class="simple-bar-chart">
-                              
-                              <div class="item" style="--clr: #5EB344; --val: 10">
-                                <div class="label">Infantil</div>
-                                <div class="value">80</div>
-                              </div>
-                              
-                              <div class="item" style="--clr: #FCB72A; --val: 15">
-                                <div class="label">P</div>
-                                <div class="value">50</div>
-                              </div>
-                              
-                              <div class="item" style="--clr: #F8821A; --val: 15">
-                                <div class="label">P - Baby look</div>
-                                <div class="value">100</div>
-                              </div>
-                              
-                              <div class="item" style="--clr: #E0393E; --val: 25">
-                                <div class="label">M</div>
-                                <div class="value">40</div>
-                              </div>
-                              
-                              <div class="item" style="--clr: #963D97; --val: 25">
-                                <div class="label">M - Baby look</div>
-                                <div class="value">18</div>
-                              </div>
-                              
-                              <div class="item" style="--clr: #069CDB; --val: 24">
-                                <div class="label">G</div>
-                                <div class="value">90</div>
-                              </div>
-    
-                              <div class="item" style="--clr: #db0669; --val: 20">
-                                <div class="label">GG</div>
-                                <div class="value">20</div>
-                              </div>
-                            </div>
+                            <h1>Carregando Dados...</h1>
+                            
                         </div>
                     </div>
                 </div>

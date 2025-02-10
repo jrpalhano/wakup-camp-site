@@ -75,6 +75,7 @@ body{
                 border-radius: 6px;
                 border:none;
                 background-color: #FF8F00;
+                color: white;
             }
             .btn:active{
                 background-color: #ffa530
@@ -83,3 +84,6 @@ body{
         }
     }
 } 
+
+
+

@@ -7,15 +7,23 @@ const wrapper = document.getElementById('wrapper')
 const desconto = document.getElementById('desconto')
 const valorFinal =document.getElementById('valorFinal')
 const confirmaPagamento = document.getElementById('confirmaPagamento')
+const graph = document.getElementById('graph')
+const graphShirtMale = document.getElementById('graphShirtMale')
+const nomeUsuario = document.getElementById('nomeUsuario')
+const funcaoUsuario = document.getElementById('funcaoUsuario')
+
 let dados = ''
 let dadosCauculos = ''
 async function initialData(){
+    const dadosUsuario = localStorage.getItem('data')
+    nomeUsuario.innerText = JSON.parse(dadosUsuario)?.data.info.nome?.toUpperCase()
+    funcaoUsuario.innerText = JSON.parse(dadosUsuario)?.data.info.funcao?.toUpperCase()
 
     iscrRealizadas.innerText =  "Carregando..."
     iscrFinalizadas.innerText = "Carregando..."
     ValorPago.innerText = "Carregando..."
 
-    let response = await fetch("http://localhost:4000/home_data_stats",{
+    let response = await fetch("https://api-wakeup-camp-production.up.railway.app/home_data_stats",{
         method: "GET",
         headers: {
           "content-type": "application/json"
@@ -57,8 +65,8 @@ async function initialData(){
     lsContent.innerHTML = htmlContent
     
     const contagem = {
-        masculino: { P: 0, M: 0, G: 0, GG: 0, XG: 0, XXG: 0, "P - Baby look":0, "M - Baby look": 0 },
-        feminino: { P: 0, M: 0, G: 0, GG: 0, XG: 0, XXG: 0 }
+        masculino: { Infantil: 0, P: 0, M: 0, G: 0, GG: 0, XG: 0, XXG: 0, "P - Baby look":0, "M - Baby look": 0 },
+        feminino: { Infantil: 0, P: 0, M: 0, G: 0, GG: 0, XG: 0, XXG: 0, "P - Baby look":0, "M - Baby look": 0}
     };
 
     for (let i = 0; i < data?.data[0].inscricoes.length; i++) {
@@ -68,6 +76,83 @@ async function initialData(){
         contagem[sexo][tamanho]++; 
     }
     //console.log(contagem.masculino);
+
+    graph.innerHTML = `
+        <h2>Camisas Femininas</h2>
+        <div class="simple-bar-chart">
+            
+            <div class="item" style="--clr: #5EB344; --val: 0">
+            <div class="label">Infantil</div>
+            <div class="value">0</div>
+            </div>
+            
+            <div class="item" style="--clr: #FCB72A; --val: ${contagem.feminino.P}">
+            <div class="label">P</div>
+            <div class="value">${contagem.feminino.P}</div>
+            </div>
+            
+            <div class="item" style="--clr: #F8821A; --val: ${contagem.feminino["M - Baby look"]}">
+            <div class="label">P - Baby look</div>
+            <div class="value">${contagem.feminino["M - Baby look"]}</div>
+            </div>
+            
+            <div class="item" style="--clr: #E0393E; --val: ${contagem.feminino.M}">
+            <div class="label">M</div>
+            <div class="value">${contagem.feminino.M}</div>
+            </div>
+            
+            <div class="item" style="--clr: #963D97; --val: ${contagem.feminino["M - Baby look"]}">
+            <div class="label">M - Baby look</div>
+            <div class="value">${contagem.feminino["M - Baby look"]}</div>
+            </div>
+            
+            <div class="item" style="--clr: #069CDB; --val: ${contagem.feminino.G}">
+            <div class="label">G</div>
+            <div class="value">${contagem.feminino.G}</div>
+            </div>
+
+            <div class="item" style="--clr: #db0669; --val: ${contagem.feminino.GG}">
+            <div class="label">GG</div>
+            <div class="value">${contagem.feminino.GG}</div>
+            </div>
+        </div>
+    `
+    graphShirtMale.innerHTML = `
+        <div class="graph" >
+            <h2>Camisas Masculinas</h2>
+            <div class="simple-bar-chart">
+                
+                <div class="item" style="--clr: #5EB344; --val: ${contagem.masculino.Infantil}">
+                <div class="label">Infantil</div>
+                <div class="value">${contagem.masculino.Infantil}</div>
+                </div>
+                
+                <div class="item" style="--clr: #FCB72A; --val: ${contagem.masculino.P}">
+                <div class="label">P</div>
+                <div class="value">${contagem.masculino.P}</div>
+                </div>
+                
+                <div class="item" style="--clr: #E0393E; --val: ${contagem.masculino.M}">
+                <div class="label">M</div>
+                <div class="value">${contagem.masculino.M}</div>
+                </div>
+                
+                <div class="item" style="--clr: #069CDB; --val: ${contagem.masculino.G}">
+                <div class="label">G</div>
+                <div class="value">${contagem.masculino.G}</div>
+                </div>
+
+                <div class="item" style="--clr: #db0669; --val: ${contagem.masculino.GG}">
+                <div class="label">GG</div>
+                <div class="value">${contagem.masculino.GG}</div>
+                </div>
+            </div> 
+        </div>   
+    
+    `
+
+
+
 }
 
 initialData()
@@ -193,7 +278,10 @@ function fecharModalParticipantes(){
 }
 
 
-
+async function logout(){
+    localStorage.removeItem('data')
+    window.location.href = "/"
+}
 
 async function confirmarPagamento(){
     toast()
@@ -214,7 +302,7 @@ async function confirmarPagamento(){
     }
 
     
-    await fetch("http://localhost:4000/compensar_pagamento",{
+    await fetch("https://api-wakeup-camp-production.up.railway.app/compensar_pagamento",{
         "method": "PUT",
         headers:{
             "content-type": "application/json"
