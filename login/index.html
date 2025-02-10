@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html  lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WakeUp Camp - Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../login/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <div class="logo_area">
+                <img src="../src/assets/LOGO-WAKE-UP 1.svg" alt="logo wakeup" />
+            </div>
+            <div class="login_form">
+                <p>COORDENAÇÂO</p>
+                <div class="usuario" id="usuarioDiv" >
+                    <img class="icone" src="../src/assets/do-utilizador.png" />
+                    <input class="input" id="usuario" type="text" placeholder="Usuário"/>
+                </div>
+                <div class="usuario" id="senhaDiv">
+                    <img class="icone" src="../src/assets/trancar.png" />
+                    <input class="input"  id="senha" type="password" placeholder="Senha"/>
+                </div>
+                <button class="btn" id="btnEntrar" onclick="handleLogin()">Entrar</button>
+            </div>
+        </div>
+        
+        <script src="scriptLogin.js" async defer></script>
+    </body>
+</html>

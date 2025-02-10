@@ -1,0 +1,475 @@
+@import url('grafico.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    background-color: #003532;
+
+    .menu{
+        padding: 25px 0;
+        width: 350px;
+        height: 100%;
+        background-color: #004744;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+
+        .user{
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            span{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: #aaa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            p{
+                margin-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                color: white;
+            }
+        }
+        .menu_item{
+            margin-top: 30px;
+            padding: 18px;
+            ul{
+                list-style: none;
+                li{
+                    padding: 6px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 13pt;
+                    margin-top: 8px;
+                    cursor: pointer;
+                    text-align: center;
+                    color: white;
+                }
+   
+            }
+            
+        }
+        .separador{
+            flex: 1;
+        }
+        .footer{
+
+            width: 350px;
+
+            bottom: 18px;
+            display: flex;
+            flex-direction: column;
+   
+           
+            p{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                
+            }        
+        }
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        
+        .cards{
+            width: 100%;
+            height: 20% ;
+            gap: 8px;
+            display: flex;
+            flex-direction: row;    
+            
+            .card{
+                padding: 8px;
+                width: 100%;
+                height: 150px;
+                background-color: #004744;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                .cardTitle{
+                    width: 100%;
+                    padding: 8px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .titleText{
+                        font-size: 20pt;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: white;
+                    }
+                    img{
+                        height:  30pt;
+                        
+                    }
+                }
+                .content{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    .contentValue{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 35pt;
+                        color: white;
+                    }
+                }
+
+            }
+
+
+        }
+        .content{
+            flex: 1;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            .area1{
+                flex: 1;             
+                .lastSub{
+                    padding: 10px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 12px;
+                    background-color: #004744;
+                    overflow: auto;
+                    .lsTitle{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        h2{
+                            font-family: Arial, Helvetica, sans-serif;
+                            color: white;
+                        }
+                    }
+                    .lsContent{
+                        padding-top: 15px;
+                        width: 100%;
+                        flex: 1;
+                   
+                        overflow: auto;
+
+                        .cardSubscribeInfo{
+                            padding: 4px;
+                            width: 100%;
+                            height: 60px;
+                            background-color: #003532;
+                            border-radius: 8px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 6px;
+                            .loading{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p{
+                                    font-weight: 600;
+                                    font-size: x-large;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    color: white;
+                                }
+                            }
+                            .subIcon{
+                                padding: 5px;
+                                width: 60px;
+                                height: 100%;
+                                background-color: aquamarine;
+                                border-radius: 6px;
+                                display: flex;
+                               
+                            }
+                            .subText{
+                                padding-left: 10px;
+                                display: flex;
+                                flex: 1;
+                                flex-direction: column;
+                                justify-content: center;
+                                .subNamePhone{
+                                    h5{
+                                        font-family: Arial, Helvetica, sans-serif;
+                                        color: white;
+                                    }
+                                }
+                                p{
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    color: white;
+                                }
+                            }
+                            .statusPagamento{
+                                width: 60px;
+                                height: 100%;
+                                background-color: aquamarine;
+                                border-radius: 6px; 
+                                
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                color: white;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: larger;
+                                font-weight: bolder;
+                            }
+                        }
+                        .cardSubscribeInfo:hover{
+                            background-color: #004642;
+                            border:1px solid #003532;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                .lastSub::-webkit-scrollbar {
+                    width: 10px;  /* largura da barra de rolagem vertical */
+                    height: 10px; /* altura da barra de rolagem horizontal */
+                }
+                .lastSub::-webkit-scrollbar-thumb {
+                    background: #FF8F008c;
+                    border-radius: 4px;                                
+                }
+                .lastSub::-webkit-scrollbar-thumb:hover {
+                    background: #fac580;
+                }
+            }
+            .area2{
+                
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .subscribeConfirm{
+                    padding: 8px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 12px;
+                    background-color: #004744;
+                    h2{
+                        text-align: center;
+                        color: white;
+                        font-weight: 600;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+            .area3{
+                padding: 8px;
+                flex: 1;
+            }
+        }
+    }
+}
+/*Hovers separados*/
+li:hover{
+    background-color: #003532;
+    color: white;
+}
+
+/*- - - - - -  MODAL PAGAMENTO  - - - - - - */
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    .wrapper{
+        padding: 6px;
+
+        width: 50%;
+        height: 70%;
+
+        background-color: #aaa;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+
+        overflow: auto;
+        .closeModal{
+            position: static;
+
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: red;
+            border-radius: 6px;
+            top: -40px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: white;
+            
+            cursor: pointer;
+        }
+        .closeModal:hover{
+            background-color: rgb(223, 47, 47);
+        }
+        .closeModal:active{
+            background-color: rgb(189, 0, 0);
+        }
+
+        .header{
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: x-large;
+            }
+        }
+        .line{
+            margin: 10px 0;
+
+            width: 100%;
+            border: 2px solid black;
+        }
+        .infoLine{
+            display: flex;
+            flex-direction: row;
+            margin: 10px 0;
+            .infoArea{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 18px;
+                .infoTitle{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 12pt;
+                    font-weight: 600;
+                }
+                .infoData{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 18pt;
+                } 
+                button{
+                    padding: 8px;
+                    height: 100%;
+                    font-size: medium;
+                }   
+            }
+            .inputModal{
+                padding: 4px;
+                background-color: white;
+                border-radius: 6px;
+                p{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: small;
+                }
+                .input{
+                    font-size: large;
+                    outline: none;
+                    border: none;
+                }
+                .input:focus{
+                    background-color: rgb(128, 155, 129);
+                    color: white;
+                }
+            }
+            .inputModal:focus-within{
+                background-color: rgb(128, 155, 129);
+            }
+        }
+    }
+    .wrapper::-webkit-scrollbar {
+        width: 10px;  /* largura da barra de rolagem vertical */
+        height: 10px; /* altura da barra de rolagem horizontal */
+    }
+    .wrapper::-webkit-scrollbar-thumb {
+        background: #666666c9;
+        border-radius: 4px;                                
+    }
+    .wrapper::-webkit-scrollbar-thumb:hover {
+        background: #4e4e4e;
+    }
+}
+/*--------   Toasts   --------*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #8a0000f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbarSuccess {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #009c15f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbarSuccess.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbarErroCadastro {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #8a0000f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbarErroCadastro.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
