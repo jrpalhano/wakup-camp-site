@@ -290,7 +290,7 @@ async function confirmarPagamento(){
     if(dadosCauculos.parcelamento === "Monitoria"){
         valor = 60
     } else {
-        valor = dadosCauculos.valor_pago
+        valor = dadosCauculos.valorentrada
     }
 
 
